@@ -169,7 +169,7 @@ async def mention_afk(mention):
             afk_since = f"`{int(seconds)}s` ago"
         if mention.sender_id not in USERS:
             if AFKREASON:
-                await mention.reply(f"I'm AFK since {afk_since}.\
+                await mention.reply(f"My Master Is Offline since {afk_since}.\
                         \nReason: `{AFKREASON}`")
             else:
                 await mention.reply(str(choice(AFKSTR)))
@@ -177,7 +177,7 @@ async def mention_afk(mention):
         else:
             if USERS[mention.sender_id] % randint(2, 4) == 0:
                 if AFKREASON:
-                    await mention.reply(f"I'm still AFK since {afk_since}.\
+                    await mention.reply(f"My Master Still Offline since {afk_since}.\
                             \nReason: `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -241,7 +241,7 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)}s` ago"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"I'm AFK since {afk_since}.\
+                    await sender.reply(f"My Master Is Offline since {afk_since}.\
                         \nReason: `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -250,7 +250,7 @@ async def afk_on_pm(sender):
             elif apprv:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"I'm still AFK since {afk_since}.\
+                        await sender.reply(f"My Master Still Offline since {afk_since}.\
                             \nReason: `{AFKREASON}`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
